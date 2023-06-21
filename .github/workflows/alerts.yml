@@ -13,3 +13,4 @@ jobs:
         env: 
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           event: push
+          commit: ${{ github.sha }}
