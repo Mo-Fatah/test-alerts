@@ -16,4 +16,4 @@ jobs:
           commit: ${{ github.sha }}
           commit_url: https://github.com/Mo-Fatah/test-alerts/commit/${{ github.sha }}
           author: ${{ github.actor }}
-          workflow_run: ${{ github.event.workflow_run }}
+          workflowrun: ${{ github.event.workflow_run }}
