@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: Mo-Fatah/ci-alerts@main
         env: 
-          webhook: https://hooks.slack.com/services/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
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
           event: pr
