@@ -11,3 +11,6 @@ jobs:
         with: 
           webhook: https://hooks.slack.com/services/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
           event: pr
+        env: 
+          webhook: https://hooks.slack.com/services/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
+          event: pr
