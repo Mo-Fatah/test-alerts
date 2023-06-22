@@ -33,4 +33,4 @@ jobs:
           author: ${{ github.actor }}
           workflow_name: ${{ github.event.workflow_run.name }}
           workflow_url: ${{ github.event.workflow_run.html_url}}
-          users_path: ${{github.workspace}}/.github/github-to-slack
+          users_path: ${{github.workspace}}/.github/slack-alerts/github-to-slack
