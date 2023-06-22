@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }} 
     steps:
-      - run: echo ${{github.event_name}}
+      - run: echo ${{github.event.workflow_run.event}}
       - uses: Mo-Fatah/ci-alerts@main
         env: 
           webhook: ${{ secrets.SLACK_WEBHOOK }}
