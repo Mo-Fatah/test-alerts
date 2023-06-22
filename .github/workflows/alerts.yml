@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.event == 'push' }} 
     steps:
-      - run: echo ${{github.event.workflow_run.event}}
+      - run: echo ${{github.refs}}
       - uses: Mo-Fatah/ci-alerts@main
         env: 
           webhook: ${{ secrets.SLACK_WEBHOOK }}
@@ -24,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.event == 'pull_request' }}
     steps:
-      - run: echo ${{github.event.workflow_run.event}}
       - uses: Mo-Fatah/ci-alerts@main
         env: 
           webhook: ${{ secrets.SLACK_WEBHOOK }}
