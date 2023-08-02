@@ -1,0 +1,15 @@
+name: Alerts
+on:
+ workflow_run:
+   workflows: [Go]
+   types: [completed]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print github context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
